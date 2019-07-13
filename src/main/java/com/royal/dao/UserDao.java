@@ -14,10 +14,10 @@ import java.util.List;
 
 @Component
 public class UserDao {
-    private Session session;
+    private static Session session;
 
-    public UserDao() {
-        this.session = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory().openSession();
+    static {
+        session = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory().openSession();
     }
 
     public void insert(UserBean user) {
@@ -43,11 +43,5 @@ public class UserDao {
         } catch (Exception e) {
             tx.rollback();
         }
-    }
-
-    @Override
-    protected void finalize() throws Throwable {
-        super.finalize();
-        session.close();
     }
 }
