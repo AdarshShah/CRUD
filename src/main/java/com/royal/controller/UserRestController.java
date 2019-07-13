@@ -7,6 +7,7 @@ import com.royal.dao.UserDao;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -19,7 +20,7 @@ public class UserRestController {
     }
 
     @RequestMapping(method = RequestMethod.DELETE)
-    public void remove(UserBean user,UserDao dao){
+    public void remove(@RequestParam UserBean user,UserDao dao){
         dao.remove(user);
     }
 
