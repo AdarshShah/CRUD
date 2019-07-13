@@ -21,6 +21,7 @@ public class UserRestController {
 
     @RequestMapping(method = RequestMethod.DELETE)
     public void remove(UserBean user,UserDao dao){
+        System.out.println(user.getId()+" "+user.getName());
         dao.remove(user);
     }
 
