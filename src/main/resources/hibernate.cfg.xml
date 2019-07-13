@@ -17,7 +17,7 @@
       
       <property name = "hibernate.connection.url">
          <!--jdbc:mysql://localhost/TEST-->
-         postgres://cnbmcfvtzzfppg:e40920600ca7cc6af9516be40e9f4319b9d43ef4be7ce41001aebac221eacb74@ec2-174-129-29-101.compute-1.amazonaws.com:5432/da4he5naa981g
+            jdbc:postgresql://ec2-174-129-29-101.compute-1.amazonaws.com:5432/da4he5naa981g
       </property>
       
       <property name = "hibernate.connection.username">
