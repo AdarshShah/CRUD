@@ -5,25 +5,27 @@
    <session-factory>
    
       <property name = "hibernate.dialect">
-         org.hibernate.dialect.MySQL5Dialect
+         <!--org.hibernate.dialect.MySQL5Dialect-->
+         org.hibernate.dialect.PostgreSQLDialect
       </property>
       
       <property name = "hibernate.connection.driver_class">
-         com.mysql.cj.jdbc.Driver
+         org.postgresql.Driver
       </property>
       
       <!-- Assume test is the database name -->
       
       <property name = "hibernate.connection.url">
-         jdbc:mysql://localhost/TEST
+         <!--jdbc:mysql://localhost/TEST-->
+         postgres://cnbmcfvtzzfppg:e40920600ca7cc6af9516be40e9f4319b9d43ef4be7ce41001aebac221eacb74@ec2-174-129-29-101.compute-1.amazonaws.com:5432/da4he5naa981g
       </property>
       
       <property name = "hibernate.connection.username">
-         root
+         cnbmcfvtzzfppg
       </property>
       
       <property name = "hibernate.connection.password">
-      root
+      e40920600ca7cc6af9516be40e9f4319b9d43ef4be7ce41001aebac221eacb74
       </property>
       
       <property name="hbm2ddl.auto">update</property>
