@@ -35,7 +35,7 @@ public class UserDao {
     public List getAll() {
         Session session = sessionFactory.openSession();
         Criteria cs = session.createCriteria(UserBean.class);
-        List list = new List(cs.list();
+        List list = cs.list();
         session.close();
         return list;
     }
