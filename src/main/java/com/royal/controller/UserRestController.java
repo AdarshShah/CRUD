@@ -20,14 +20,14 @@ public class UserRestController {
     }
 
     @RequestMapping(method = RequestMethod.DELETE)
-    public void remove(@RequestParam UserBean user,UserDao dao){
+    public void remove(UserBean user,UserDao dao){
         dao.remove(user);
     }
 
     @RequestMapping(method = RequestMethod.PUT)
     public void update(UserBean user,UserDao dao){
         dao.insert(user);
-    }
+    } 
 
     @RequestMapping(method = RequestMethod.POST)
     public void create(String name,UserDao dao){
