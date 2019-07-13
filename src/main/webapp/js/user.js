@@ -2,14 +2,14 @@ var myApp = angular.module('root',[]);
 
 myApp.controller('MyController',['$scope','$http','$log',
 function($scope,$http,$log) {
-    $http.get('../restuser').success(function (result){
+    $http.get('restuser').success(function (result){
             $scope.users = result;
     }).error(function (data,status){
         $log.error(status+" "+data);
     });
 
     $scope.get = function(){
-        $http.get('../restuser').success(function (result){
+        $http.get('restuser').success(function (result){
                 $scope.users = result;
         });
     }
@@ -17,7 +17,7 @@ function($scope,$http,$log) {
     $scope.delete = function(id,name) {
         $http({
             method: "DELETE",
-            url:'../restuser',
+            url:'restuser',
             params:{"id":id,"name":name}
         }).success($scope.get);
      };
@@ -27,7 +27,7 @@ function($scope,$http,$log) {
         {
             $http({
                 method: "POST",
-                url:'../restuser',
+                url:'restuser',
                 params:{"name":name}
             }).success($scope.get);
             $scope.name = '';
