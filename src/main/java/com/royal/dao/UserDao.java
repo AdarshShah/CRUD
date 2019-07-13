@@ -44,4 +44,10 @@ public class UserDao {
             tx.rollback();
         }
     }
+
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+        session.close();
+    }
 }
