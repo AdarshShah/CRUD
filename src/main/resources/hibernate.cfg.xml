@@ -10,6 +10,7 @@
       </property>
       
       <property name = "hibernate.connection.driver_class">
+         <!-- com.mysql.cj.jdbc.Driver -->
          org.postgresql.Driver
       </property>
       
@@ -21,10 +22,12 @@
       </property>
       
       <property name = "hibernate.connection.username">
+         <!-- root -->
          cnbmcfvtzzfppg
       </property>
       
       <property name = "hibernate.connection.password">
+      <!-- root -->
       e40920600ca7cc6af9516be40e9f4319b9d43ef4be7ce41001aebac221eacb74
       </property>
       
